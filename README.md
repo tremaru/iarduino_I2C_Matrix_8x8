@@ -13,7 +13,7 @@
 
 | Модель | Ссылка на магазин |
 |---|---|
-| ![](https://wiki.iarduino.ru/img/resources/1050/1050.svg) | https://iarduino.ru/shop/Expansion-payments/led-matrica-8x8---i2c-trema-modul.html |
+| Модуль LED матрица 8x8, I2C <img src="https://wiki.iarduino.ru/img/resources/1150/1150.svg" width="100px"></img> | https://iarduino.ru/shop/Expansion-payments/led-matrica-8x8---i2c-trema-modul.html |
 
 ## Назначение функций:
 
