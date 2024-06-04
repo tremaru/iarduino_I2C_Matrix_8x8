@@ -1,5 +1,5 @@
 //	Библиотека для работы со светодиодной матрицей 8x8: http://iarduino.ru/shop/Expansion-payments/led-matrica-8x8---i2c-trema-modul.html
-//  Версия: 1.0.7
+//  Версия: 1.0.8
 //  Последнюю версию библиотеки Вы можете скачать по ссылке: http://iarduino.ru/file/491.html
 //  Подробное описание функции бибилиотеки доступно по ссылке: https://wiki.iarduino.ru/page/trema-matrix-led/
 //  Библиотека является собственностью интернет магазина iarduino.ru и может свободно использоваться и распространяться!
@@ -80,10 +80,10 @@ class iarduino_I2C_Matrix_8x8{																											//
 		}																																//
 	/**	Пользовательские функции **/																									//
 		#if defined(TwoWire_h) || defined(__ARDUINO_WIRE_IMPLEMENTATION__)																//
-		bool				begin			(TwoWire* i=&Wire					){ selI2C->begin(i); return _begin(); }					//	Определяем функцию инициализации модуля								(Параметр:  объект для работы с аппаратной шиной I2C).
+		bool				begin			(TwoWire* i=&Wire					){ selI2C->init(i); return _begin(); }					//	Определяем функцию инициализации модуля								(Параметр:  объект для работы с аппаратной шиной I2C).
 		#endif																															//
 		#if defined(iarduino_I2C_Software_h)																							//
-		bool				begin			(SoftTwoWire* i						){ selI2C->begin(i); return _begin(); }					//	Определяем функцию инициализации модуля								(Параметр:  объект для работы с программной шиной I2C).
+		bool				begin			(SoftTwoWire* i						){ selI2C->init(i); return _begin(); }					//	Определяем функцию инициализации модуля								(Параметр:  объект для работы с программной шиной I2C).
 		#endif																															//
 		bool				changeAddress	(uint8_t							);														//	Объявляем  функцию смены адреса модуля на шине I2C					(Параметр:  новый адрес модуля).
 		bool				reset			(void								);														//	Объявляем  функцию перезагрузки модуля								(Параметр:  отсутствует).
